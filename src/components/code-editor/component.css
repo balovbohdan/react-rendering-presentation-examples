@@ -1,0 +1,9 @@
+.CodeEditor {
+
+}
+
+.CodeEditor .header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}

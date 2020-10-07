@@ -1,29 +1,38 @@
 import React, { createElement } from 'react';
-import { UnControlled as CodeMirror } from 'react-codemirror2';
-import 'codemirror/mode/xml/xml';
-import 'codemirror/mode/javascript/javascript';
 
-const SomeWrapper = (props) => (
-  <div>{props.children}</div>
-);
+import CodeEditor from '../../components/code-editor';
+import RenderOutput from '../../components/render-output';
+
+import './component.css';
 
 const CreateElement = () => {
-  // const jsxOutput = <SomeWrapper><p>JSX output</p></SomeWrapper>;
-  // const createElementOutput = createElement(SomeWrapper, null, [
-  //   createElement('p', null, 'createElement(...) output')
-  // ]);
+  const code = `
+  const SomeWrapper = (props) => <div>{props.children}</div>;
+
+  const jsxOutput = <SomeWrapper><p>JSX output</p></SomeWrapper>;
+
+  const createElementOutput = React.createElement(SomeWrapper, null, [
+    React.createElement('p', null, 'createElement(...) output')
+  ]);
+
+  console.log('JSX output', jsxOutput);
+  console.log('React.createElement output', createElementOutput);
+
+  ReactDOM.render(jsxOutput, document.getElementById('renderOutputJsx'));
+  ReactDOM.render(createElementOutput, document.getElementById('renderOutputCreateElement'));
+  `;
 
   return (
-    <CodeMirror
-      value='<h1>I react-codemirror2</h1>'
-      options={{
-        mode: 'xml',
-        theme: 'material',
-        lineNumbers: true
-      }}
-      onChange={(editor, data, value) => {
-      }}
-    />
+    <>
+      <h1>React.createElement(...)</h1>
+      <CodeEditor value={code} />
+      <RenderOutput
+        title="JSX output"
+        outputWrapperId="renderOutputJsx" />
+      <RenderOutput
+        title="React.createElement(...) output"
+        outputWrapperId="renderOutputCreateElement" />
+    </>
   );
 };
 

@@ -1,0 +1,16 @@
+.RenderOutput {
+  width: 100%;
+  border: 2px solid var(--color-gray);
+  margin: 20px 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.RenderOutput .title {
+  border-bottom: 2px solid var(--color-gray);
+}
+
+.RenderOutput .output,
+.RenderOutput .output p {
+  font-family: monospace;
+}

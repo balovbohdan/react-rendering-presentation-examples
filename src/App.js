@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import CodeMirror from 'react-codemirror2';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/material.css';
 
 import Home from './routes/home';
 import CreateElement from './routes/create-element';
