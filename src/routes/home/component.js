@@ -8,6 +8,9 @@ const Home = () => (
       <li>
         <Link to="/create-element" className="link">React.createElement(...)</Link>
       </li>
+      <li>
+        <Link to="/standard-render-behavior" className="link">Standard Render Behavior</Link>
+      </li>
     </ul>
   </div>
 );
