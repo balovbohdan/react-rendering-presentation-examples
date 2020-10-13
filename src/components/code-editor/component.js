@@ -30,7 +30,7 @@ const CodeEditor = (props) => {
   return (
     <div className="CodeEditor">
       <div className="header">
-        <button onClick={handleExecute}>Execute</button>
+        {props.executable && <button onClick={handleExecute}>Execute</button>}
       </div>
       <CodeMirror
         value={props.value}
@@ -46,6 +46,11 @@ const CodeEditor = (props) => {
 
 CodeEditor.propTypes = {
   value: PropTypes.string.isRequired,
+  executable: PropTypes.bool,
+};
+
+CodeEditor.defaultProps = {
+  executable: true,
 };
 
 export default CodeEditor;

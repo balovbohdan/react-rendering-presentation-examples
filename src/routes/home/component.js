@@ -11,6 +11,12 @@ const Home = () => (
       <li>
         <Link to="/standard-render-behavior" className="link">Standard Render Behavior</Link>
       </li>
+      <li>
+        <Link to="/render-batching-pseudocode" className="link">Render Batching: Pseudocode</Link>
+      </li>
+      <li>
+        <Link to="/render-batching-example" className="link">Render Batching: Real World Example</Link>
+      </li>
     </ul>
   </div>
 );
