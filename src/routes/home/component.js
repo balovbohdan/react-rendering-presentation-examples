@@ -17,6 +17,9 @@ const Home = () => (
       <li>
         <Link to="/render-batching-example" className="link">Render Batching: Real World Example</Link>
       </li>
+      <li>
+        <Link to="/props-references-optimization" className="link">Props References Optimization</Link>
+      </li>
     </ul>
   </div>
 );

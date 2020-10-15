@@ -32,6 +32,11 @@ h1 {
   border-bottom: 2px solid var(--color-gray);
 }
 
+h2 {
+  color: var(--color-blue);
+  padding-bottom: 10px;
+}
+
 h3 {
   color: var(--color-gray);
 }
@@ -84,6 +89,13 @@ button {
 
 button:hover {
   color: #f0f0f0;
+}
+
+/* ---- */
+
+section {
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-gray);
 }
 
 /* ---- */
