@@ -67,6 +67,35 @@ const PropsReferencesOptimization = (props) => {
   ReactDOM.render(<App />, document.getElementById('renderOutputHostComponents'));
   `;
 
+  const codePropsWithChildren = `
+  const Child = (props) => {
+    console.log('Render <Child />');
+
+    return <p>{props.data.text} {props.children}</p>;
+  };
+
+  const ChildMemoized = React.memo(Child);
+
+  const Parent = () => {
+    const [counter, setCounter] = React.useState(0);
+    const handleClick = () => { setCounter(counter + 1); };
+    const data = React.useMemo(() => ({ text: 'Hello World!' }), []);
+
+    console.log('Render <Parent />');
+
+    return (
+      <>
+        <ChildMemoized data={data}>
+          <span>Your Children.</span>
+        </ChildMemoized>
+        <button onClick={handleClick}>Counter: {counter}</button>
+      </>
+    );
+  };
+
+  ReactDOM.render(<Parent />, document.getElementById('renderOutputPropsWithChildren'));
+  `;
+
   return (
     <>
       <h1>Props References Optimization</h1>
@@ -84,6 +113,11 @@ const PropsReferencesOptimization = (props) => {
         <h2>Don't Optimize Host Components!</h2>
         <CodeEditor value={codeHostComponents} />
         <RenderOutput title="Render Output" outputWrapperId="renderOutputHostComponents" />
+      </section>
+      <section id="props-with-children">
+        <h2>Props With Children</h2>
+        <CodeEditor value={codePropsWithChildren} />
+        <RenderOutput title="Render Output" outputWrapperId="renderOutputPropsWithChildren" />
       </section>
     </>
   );
