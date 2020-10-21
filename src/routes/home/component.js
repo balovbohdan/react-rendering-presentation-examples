@@ -20,6 +20,9 @@ const Home = () => (
       <li>
         <Link to="/props-references-optimization" className="link">Props References Optimization</Link>
       </li>
+      <li>
+        <Link to="/immutability-matters" className="link">Immutability Matters</Link>
+      </li>
     </ul>
   </div>
 );

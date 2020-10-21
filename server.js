@@ -16,7 +16,10 @@ app.use(bodyParser.json());
 app.post('/parse', (req, res) => {
   babelCore.transform(req.body.code, {
     presets: ['@babel/preset-react'],
-    plugins: ['@babel/plugin-transform-react-jsx'],
+    plugins: [
+      '@babel/plugin-transform-react-jsx',
+      '@babel/plugin-proposal-class-properties',
+    ],
   }, (error, result) => {
     if (error) {
       res.status(500).end();

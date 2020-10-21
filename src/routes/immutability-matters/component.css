@@ -1,0 +1,8 @@
+.ImmutabilityMatters {
+
+}
+
+.ImmutabilityMatters .funcComponent button,
+.ImmutabilityMatters .classComponent button {
+  margin-right: 10px;
+}
