@@ -6,6 +6,9 @@ const Home = () => (
     <h1>Contents</h1>
     <ul>
       <li>
+        <Link to="/slides" className="link">Slides</Link>
+      </li>
+      <li>
         <Link to="/create-element" className="link">React.createElement(...)</Link>
       </li>
       <li>

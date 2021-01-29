@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 10px;
   background-color: rgb(34 34 34);
@@ -11,71 +11,60 @@ body {
 
 code {
   font-family: monospace;
-}
+} */
 
 /* ---- */
 
 :root {
   --color-gray: rgb(166, 170, 169);
-  --color-blue: rgb(52 165 218);
+  --color-blue: #42affa;
 }
 
 /* ---- */
 
-h1, h2, h3, a, p, button {
-  font-family: system-ui;
+h4 {
+  color: var(--color-blue) !important;
 }
 
-h1 {
-  color: var(--color-gray);
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--color-gray);
-}
-
-h2 {
-  color: var(--color-blue);
-  padding-bottom: 10px;
-}
-
-h3 {
-  color: var(--color-gray);
-}
-
-a {
+/* a {
   color: var(--color-blue);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-}
+} */
 
-p {
+/* p {
   color: var(--color-blue);
-}
+} */
 
 /* ---- */
 
-ul {
+/* ul {
   list-style: none;
-}
+} */
 
 ul li {
-  line-height: 2.2rem;
+  margin-bottom: 20px;
 }
 
-ul li::before {
+ul li::marker {
+  color: var(--color-gray);
+}
+
+/* ul li::before {
   content: "\2022";
   color: var(--color-blue);
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-}
+} */
 
 /* ---- */
 
-button {
+/* button {
   background-color: orange;
   border: none;
   border-radius: 4px;
@@ -85,17 +74,17 @@ button {
   font-weight: bold;
   outline: none;
   transition: color 0.1s ease-in;
-}
+} */
 
-button:hover {
+/* button:hover {
   color: #f0f0f0;
-}
+} */
 
 /* ---- */
 
-section {
+/* section {
   padding-bottom: 10px;
   border-bottom: 2px solid var(--color-gray);
-}
+} */
 
 /* ---- */

@@ -29,7 +29,6 @@ const CreateElement = () => {
 
   return (
     <>
-      <h1>React.createElement(...)</h1>
       <CodeEditor value={code} />
       <RenderOutput title="Render Output" outputWrapperId="renderOutput" />
     </>
